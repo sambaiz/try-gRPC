@@ -1,0 +1,17 @@
+syntax = "proto3";
+
+option java_package = "net.sambaiz.trygrpc.protos";
+
+package protos;
+
+service Echo {
+  rpc RetEcho (EchoRequest) returns (EchoReply) {}
+}
+
+message EchoRequest {
+  string say = 1;
+}
+
+message EchoReply {
+  string ret = 1;
+}
